@@ -363,6 +363,7 @@
 "Assets/Script/GameManager.cs"
 "Assets/Script/Kamera.cs"
 "Assets/Script/Karakter.cs"
+"Assets/Script/Kutuphane.cs"
 -langversion:9.0
 
 /deterministic

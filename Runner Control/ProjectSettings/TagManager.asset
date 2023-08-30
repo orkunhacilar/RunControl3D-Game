@@ -6,6 +6,10 @@ TagManager:
   tags:
   - GameManager
   - igneliKutu
+  - Carpma
+  - Toplama
+  - Cikartma
+  - Bolme
   layers:
   - Default
   - TransparentFX

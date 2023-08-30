@@ -61,6 +61,7 @@
     <Compile Include="Assets/Script/Karakter.cs" />
     <Compile Include="Assets/Script/Alt_karakter.cs" />
     <Compile Include="Assets/Script/Kamera.cs" />
+    <Compile Include="Assets/Script/Kutuphane.cs" />
     <Compile Include="Assets/Script/GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -792,11 +793,11 @@
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
       <HintPath>Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
