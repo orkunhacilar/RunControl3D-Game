@@ -34,20 +34,20 @@ public class GameManager : MonoBehaviour
         {
             case "Carpma":
 
-                Matematiksel_islemler.Carpma(GelenSayi, Karakterler, Pozisyon);
+                Matematiksel_islemler.Carpma(GelenSayi, Karakterler, Pozisyon,OlusmaEfektleri);
                
                 break;
 
             case "Toplama":
 
-                Matematiksel_islemler.Toplama(GelenSayi, Karakterler, Pozisyon);
+                Matematiksel_islemler.Toplama(GelenSayi, Karakterler, Pozisyon,OlusmaEfektleri);
 
                 break;
 
 
             case "Cikartma":
 
-                Matematiksel_islemler.Cikartma(GelenSayi, Karakterler);
+                Matematiksel_islemler.Cikartma(GelenSayi, Karakterler, YokOlmaEfektleri);
                
                
                 break;
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
 
 
             case "Bolme":
-                Matematiksel_islemler.Bolme(GelenSayi, Karakterler);
+                Matematiksel_islemler.Bolme(GelenSayi, Karakterler, YokOlmaEfektleri);
 
 
                 break;
