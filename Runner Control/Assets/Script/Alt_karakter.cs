@@ -6,14 +6,17 @@ using UnityEngine.AI;
 public class Alt_karakter : MonoBehaviour
 {
 
-    GameObject Target;
+    
     NavMeshAgent _Navmesh;
+    public GameManager _Gamemanager;
+    public GameObject Target;
 
     // Start is called before the first frame update
     void Start()
     {
         _Navmesh = GetComponent<NavMeshAgent>();
-        Target = GameObject.FindWithTag("GameManager").GetComponent<GameManager>().VarisNoktasi;
+      
+     
     }
 
     // Update is called once per frame
@@ -22,49 +25,42 @@ public class Alt_karakter : MonoBehaviour
         _Navmesh.SetDestination(Target.transform.position); // Surekli o positionu takip etmesini sagliyoruz. 
     }
 
+    Vector3 PozisyonVer() {
+       return new Vector3(transform.position.x, .23f, transform.position.z);
+        
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("igneliKutu"))
         {
-            Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
-            
-            GameObject.FindWithTag("GameManager").GetComponent<GameManager>().YokOlmaEfektiOlustur(yeniPoz);
+            _Gamemanager.YokOlmaEfektiOlustur(PozisyonVer());
             gameObject.SetActive(false);
         }
 
-        if (other.CompareTag("Testere"))
+       else if (other.CompareTag("Testere"))
         {
-            Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
-
-            GameObject.FindWithTag("GameManager").GetComponent<GameManager>().YokOlmaEfektiOlustur(yeniPoz);
+            _Gamemanager.YokOlmaEfektiOlustur(PozisyonVer());
             gameObject.SetActive(false);
         }
 
-        if (other.CompareTag("Pervaneigneler"))
+        else if (other.CompareTag("Pervaneigneler"))
         {
-            Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
-
-            GameObject.FindWithTag("GameManager").GetComponent<GameManager>().YokOlmaEfektiOlustur(yeniPoz);
+            _Gamemanager.YokOlmaEfektiOlustur(PozisyonVer());
             gameObject.SetActive(false);
         }
 
-        if (other.CompareTag("Balyoz"))
+        else if (other.CompareTag("Balyoz"))
         {
-            Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
-
-            GameObject.FindWithTag("GameManager").GetComponent<GameManager>().YokOlmaEfektiOlustur(yeniPoz,true);
-           
+            _Gamemanager.YokOlmaEfektiOlustur(PozisyonVer(), true);
             gameObject.SetActive(false);
         }
 
-        if (other.CompareTag("Dusman"))
+        else if (other.CompareTag("Dusman"))
         {
-            Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
-
-            GameObject.FindWithTag("GameManager").GetComponent<GameManager>().YokOlmaEfektiOlustur(yeniPoz,false,false);
-
-            gameObject.SetActive(false);
+         _Gamemanager.YokOlmaEfektiOlustur(PozisyonVer(), false,false);
+         gameObject.SetActive(false);
         }
     }
 }

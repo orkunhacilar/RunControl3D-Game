@@ -6,19 +6,17 @@ using UnityEngine.AI;
 public class Dusman : MonoBehaviour
 {
     public GameObject Saldiri_Hedefi;
-    NavMeshAgent _NavMesh;
+    public NavMeshAgent _NavMesh;
     bool Saldiri_Basladimi;
+    public GameManager _Gamemanager;
+    public Animator _Animator;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        _NavMesh = GetComponent<NavMeshAgent>();
-    }
+    
 
     public void AnimasyonTetikle()
     {
-        GetComponent<Animator>().SetBool("Saldir", true);
+        _Animator.SetBool("Saldir", true);
         Saldiri_Basladimi = true;
     }
 
@@ -39,7 +37,7 @@ public class Dusman : MonoBehaviour
         {
             Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
 
-            GameObject.FindWithTag("GameManager").GetComponent<GameManager>().YokOlmaEfektiOlustur(yeniPoz,false,true);
+            _Gamemanager.YokOlmaEfektiOlustur(yeniPoz,false,true);
 
             gameObject.SetActive(false);
         }
