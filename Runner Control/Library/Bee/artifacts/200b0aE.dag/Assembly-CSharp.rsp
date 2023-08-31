@@ -359,11 +359,16 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.5f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.5f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+"Assets/Dusman.cs"
+"Assets/Modeller/DenizVeAda/Scripts/LowPolyWater.cs"
+"Assets/Script/AdamLekesi.cs"
 "Assets/Script/Alt_karakter.cs"
 "Assets/Script/GameManager.cs"
 "Assets/Script/Kamera.cs"
 "Assets/Script/Karakter.cs"
 "Assets/Script/Kutuphane.cs"
+"Assets/Script/Pervane.cs"
+"Assets/Script/Ruzgar.cs"
 -langversion:9.0
 
 /deterministic

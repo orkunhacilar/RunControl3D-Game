@@ -14,11 +14,27 @@ public class GameManager : MonoBehaviour
     public List<GameObject> Karakterler;
     public List<GameObject> OlusmaEfektleri;
     public List<GameObject> YokOlmaEfektleri;
+    public List<GameObject> AdamLekesiEfekleri;
+
+    [Header ("LEVEL VERILERI")]
+    public List<GameObject> Dusmanlar;
+    public int KacDusmanOlsun;
+
 
 
     void Start()
     {
-        
+        DusmanlariOlustur();
+    }
+
+    public void DusmanlariOlustur()
+    {
+        for (int i = 0; i< KacDusmanOlsun; i++) {
+
+            Dusmanlar[i].SetActive(true);
+        }
+
+
     }
 
     void Update()
@@ -64,7 +80,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void YokOlmaEfektiOlustur(Vector3 Pozisyon)
+    public void YokOlmaEfektiOlustur(Vector3 Pozisyon, bool Balyoz=false)
     {
         foreach(var item in YokOlmaEfektleri)
         {
@@ -77,5 +93,25 @@ public class GameManager : MonoBehaviour
                 break;
             }
         }
+
+        if (Balyoz)
+        {
+            Vector3 yeniPoz = new Vector3(Pozisyon.x, .005f, Pozisyon.z);
+            foreach (var item in AdamLekesiEfekleri)
+            {
+                if (!item.activeInHierarchy)
+                {
+                    item.SetActive(true);
+                    item.transform.position = yeniPoz;
+                    break;
+                }
+            }
+
+        }
     }
+
+    
+
+
+    
 }

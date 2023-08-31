@@ -32,5 +32,30 @@ public class Alt_karakter : MonoBehaviour
             GameObject.FindWithTag("GameManager").GetComponent<GameManager>().YokOlmaEfektiOlustur(yeniPoz);
             gameObject.SetActive(false);
         }
+
+        if (other.CompareTag("Testere"))
+        {
+            Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
+
+            GameObject.FindWithTag("GameManager").GetComponent<GameManager>().YokOlmaEfektiOlustur(yeniPoz);
+            gameObject.SetActive(false);
+        }
+
+        if (other.CompareTag("Pervaneigneler"))
+        {
+            Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
+
+            GameObject.FindWithTag("GameManager").GetComponent<GameManager>().YokOlmaEfektiOlustur(yeniPoz);
+            gameObject.SetActive(false);
+        }
+
+        if (other.CompareTag("Balyoz"))
+        {
+            Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
+
+            GameObject.FindWithTag("GameManager").GetComponent<GameManager>().YokOlmaEfektiOlustur(yeniPoz,true);
+           
+            gameObject.SetActive(false);
+        }
     }
 }
