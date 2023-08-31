@@ -67,7 +67,7 @@
     <Compile Include="Assets/Modeller/DenizVeAda/Scripts/LowPolyWater.cs" />
     <Compile Include="Assets/Script/Kutuphane.cs" />
     <Compile Include="Assets/Script/GameManager.cs" />
-    <Compile Include="Assets/Dusman.cs" />
+    <Compile Include="Assets/Script/Dusman.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
