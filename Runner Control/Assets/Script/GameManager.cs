@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public int KacDusmanOlsun;
     public GameObject _Anakarakter;
     public bool OyunBittimi;
+    bool SonaGeldikmi;
 
 
 
@@ -48,6 +49,8 @@ public class GameManager : MonoBehaviour
                 item.GetComponent<Dusman>().AnimasyonTetikle();
             }
         }
+        SonaGeldikmi = true;
+        SavasDurumu();
     }
 
 
@@ -61,34 +64,37 @@ public class GameManager : MonoBehaviour
     void SavasDurumu()
     {
 
-        if(AnlikKarakterSayisi == 1 || KacDusmanOlsun==0)
+        if (SonaGeldikmi)
         {
-            OyunBittimi = true;
-            foreach(var item in Dusmanlar)
+            if (AnlikKarakterSayisi == 1 || KacDusmanOlsun == 0)
             {
-                if (item.activeInHierarchy)
+                OyunBittimi = true;
+                foreach (var item in Dusmanlar)
                 {
-                    item.GetComponent<Animator>().SetBool("Saldir", false);
+                    if (item.activeInHierarchy)
+                    {
+                        item.GetComponent<Animator>().SetBool("Saldir", false);
+                    }
                 }
-            }
 
-            foreach (var item in Karakterler)
-            {
-                if (item.activeInHierarchy)
+                foreach (var item in Karakterler)
                 {
-                    item.GetComponent<Animator>().SetBool("Saldir", false);
+                    if (item.activeInHierarchy)
+                    {
+                        item.GetComponent<Animator>().SetBool("Saldir", false);
+                    }
                 }
-            }
 
-            _Anakarakter.GetComponent<Animator>().SetBool("Saldir", false);
+                _Anakarakter.GetComponent<Animator>().SetBool("Saldir", false);
 
-            if (AnlikKarakterSayisi < KacDusmanOlsun || AnlikKarakterSayisi == KacDusmanOlsun)
-            {
-                Debug.Log("Kaybettin");
-            }
-            else
-            {
-                Debug.Log("Kazandin");
+                if (AnlikKarakterSayisi < KacDusmanOlsun || AnlikKarakterSayisi == KacDusmanOlsun)
+                {
+                    Debug.Log("Kaybettin");
+                }
+                else
+                {
+                    Debug.Log("Kazandin");
+                }
             }
         }
 
