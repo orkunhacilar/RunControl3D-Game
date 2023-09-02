@@ -359,6 +359,8 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.5f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.5f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+"Assets/AnaMenu_Manager.cs"
+"Assets/Level_Manager.cs"
 "Assets/Modeller/DenizVeAda/Scripts/LowPolyWater.cs"
 "Assets/Script/AdamLekesi.cs"
 "Assets/Script/Alt_karakter.cs"

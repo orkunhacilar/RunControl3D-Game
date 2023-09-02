@@ -102,10 +102,19 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    if(AnlikKarakterSayisi>5)
-                    _BellekYonetim.VeriKaydet_int("Puan", _BellekYonetim.VeriOku_i("Puan") + 600); // puan ekleme
+                    if (AnlikKarakterSayisi > 5)
+                    {
+                        _BellekYonetim.VeriKaydet_int("Puan", _BellekYonetim.VeriOku_i("Puan") + 600); // puan ekleme
+                        _BellekYonetim.VeriKaydet_int("SonLevel", _BellekYonetim.VeriOku_i("SonLevel") + 1);
+                    }
+                  
                     else
+                    {
                         _BellekYonetim.VeriKaydet_int("Puan", _BellekYonetim.VeriOku_i("Puan") + 200); // puan ekleme
+                        _BellekYonetim.VeriKaydet_int("SonLevel", _BellekYonetim.VeriOku_i("SonLevel") + 1);
+
+                    }
+
                     Debug.Log("Kazandin");
                 }
             }

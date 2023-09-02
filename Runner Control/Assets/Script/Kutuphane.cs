@@ -302,6 +302,17 @@ namespace Orkun
         {
             return PlayerPrefs.GetFloat(Key);
         }
+
+
+        public void KontrolEtmeveTanimlama()
+        {
+            if (!PlayerPrefs.HasKey("SonLevel")) // Eger kaydedili bir lv yoksa bu oyuna yeni girdigini gosterir ve set int ile 5 kaydediyorum neden 5 build settings ilk lv 5. sira.
+            {
+                PlayerPrefs.SetInt("SonLevel", 5);
+                PlayerPrefs.SetInt("Puan", 100);
+            }
+        }
+
     }
 
 
