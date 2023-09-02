@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace Orkun
 {
-    public class Matematiksel_islemler : MonoBehaviour
+    public class Matematiksel_islemler 
     {
 
 
-        public static void Carpma(int Gelensayi, List<GameObject> Karakterler, Transform Pozisyon, List<GameObject> OlusturmaEfektleri)
+        public void Carpma(int Gelensayi, List<GameObject> Karakterler, Transform Pozisyon, List<GameObject> OlusturmaEfektleri)
         {
             int DonguSayisi = (GameManager.AnlikKarakterSayisi * Gelensayi) - GameManager.AnlikKarakterSayisi;
             //                            10                        3                      10     = 20
@@ -32,6 +32,7 @@ namespace Orkun
                                 item2.SetActive(true);
                                 item2.transform.position = Pozisyon.position;
                                 item2.GetComponent<ParticleSystem>().Play();
+                                item2.GetComponent<AudioSource>().Play(); // karakter olustugu zaman muzik calmak icin yazdigimiz kod
                                 break;
                             }
                         }
@@ -55,7 +56,7 @@ namespace Orkun
             GameManager.AnlikKarakterSayisi *= Gelensayi;
         }
 
-        public static void Toplama(int Gelensayi, List<GameObject> Karakterler, Transform Pozisyon, List<GameObject> OlusturmaEfektleri)
+        public void Toplama(int Gelensayi, List<GameObject> Karakterler, Transform Pozisyon, List<GameObject> OlusturmaEfektleri)
         {
 
             int sayi2 = 0;
@@ -76,6 +77,7 @@ namespace Orkun
                                 item2.SetActive(true);
                                 item2.transform.position = Pozisyon.position;
                                 item2.GetComponent<ParticleSystem>().Play();
+                                item2.GetComponent<AudioSource>().Play(); // karakter olustugu zaman muzik calmak icin yazdigimiz kod
                                 break;
                             }
                         }
@@ -100,7 +102,7 @@ namespace Orkun
 
         }
 
-        public static void Cikartma(int Gelensayi, List<GameObject> Karakterler, List<GameObject> YokOlmaEfektleri)
+        public void Cikartma(int Gelensayi, List<GameObject> Karakterler, List<GameObject> YokOlmaEfektleri)
         {
             if (GameManager.AnlikKarakterSayisi < Gelensayi)
             {
@@ -116,6 +118,7 @@ namespace Orkun
                             item2.SetActive(true);
                             item2.transform.position = yeniPoz;
                             item2.GetComponent<ParticleSystem>().Play();
+                            item2.GetComponent<AudioSource>().Play(); //  yok olma sesi
                             break;
                         }
                     }
@@ -147,6 +150,7 @@ namespace Orkun
                                     item2.SetActive(true);
                                     item2.transform.position = yeniPoz;
                                     item2.GetComponent<ParticleSystem>().Play();
+                                    item2.GetComponent<AudioSource>().Play(); //  yok olma sesi
                                     break;
                                 }
                             }
@@ -171,7 +175,7 @@ namespace Orkun
             }
         }
 
-        public static void Bolme(int Gelensayi, List<GameObject> Karakterler, List<GameObject> YokOlmaEfektleri)
+        public void Bolme(int Gelensayi, List<GameObject> Karakterler, List<GameObject> YokOlmaEfektleri)
         {
 
             if (GameManager.AnlikKarakterSayisi <= Gelensayi)
@@ -188,6 +192,7 @@ namespace Orkun
                             item2.SetActive(true);
                             item2.transform.position = yeniPoz;
                             item2.GetComponent<ParticleSystem>().Play();
+                            item2.GetComponent<AudioSource>().Play(); //  yok olma sesi
                             break;
                         }
                     }
@@ -218,6 +223,7 @@ namespace Orkun
                                     item2.SetActive(true);
                                     item2.transform.position = yeniPoz;
                                     item2.GetComponent<ParticleSystem>().Play();
+                                    item2.GetComponent<AudioSource>().Play(); //  yok olma sesi
                                     break;
                                 }
                             }
@@ -259,7 +265,44 @@ namespace Orkun
         }
     }
 
-    
+
+    public class BellekYonetim
+    {
+
+        public void VeriKaydet_string(string Key, string value)
+        {
+            PlayerPrefs.SetString(Key, value);
+            PlayerPrefs.Save();
+        }
+
+        public void VeriKaydet_int(string Key, int value)
+        {
+            PlayerPrefs.SetInt(Key, value);
+            PlayerPrefs.Save();
+        }
+
+        public void VeriKaydet_float(string Key, float value)
+        {
+            PlayerPrefs.SetFloat(Key, value);
+            PlayerPrefs.Save();
+        }
+
+
+        public string VeriOku_s(string Key)
+        {
+            return PlayerPrefs.GetString(Key);
+        }
+
+        public int VeriOku_i(string Key)
+        {
+            return PlayerPrefs.GetInt(Key);
+        }
+
+        public float VeriOku_f(string Key)
+        {
+            return PlayerPrefs.GetFloat(Key);
+        }
+    }
 
 
 }

@@ -68,6 +68,7 @@
     <Compile Include="Assets/Script/Kutuphane.cs" />
     <Compile Include="Assets/Script/GameManager.cs" />
     <Compile Include="Assets/Script/Dusman.cs" />
+    <Compile Include="Assets/Script/BosKarakter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -77,6 +78,7 @@
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets/Modeller/DenizVeAda/Shaders/WaterShaded.shader" />
+    <None Include="Assets/Pixel Font - Tripfive/_README.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
     <None Include="Assets/Modeller/DenizVeAda/LowPoly Island/Credits.txt" />
     <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
@@ -92,6 +94,7 @@
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
     <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
+    <None Include="Assets/Pixel Font - Tripfive/Fonts/readme.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>

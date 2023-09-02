@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Orkun;
+using static UnityEditor.Progress;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,11 +24,19 @@ public class GameManager : MonoBehaviour
     public bool OyunBittimi;
     bool SonaGeldikmi;
 
+    Matematiksel_islemler _Matematiksel_islemler = new Matematiksel_islemler();
+    BellekYonetim _BellekYonetim = new BellekYonetim();
+
 
 
     void Start()
     {
         DusmanlariOlustur();
+
+      
+
+        Debug.Log(_BellekYonetim.VeriOku_i("Puan"));
+       
     }
 
     public void DusmanlariOlustur()
@@ -93,6 +102,10 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
+                    if(AnlikKarakterSayisi>5)
+                    _BellekYonetim.VeriKaydet_int("Puan", _BellekYonetim.VeriOku_i("Puan") + 600); // puan ekleme
+                    else
+                        _BellekYonetim.VeriKaydet_int("Puan", _BellekYonetim.VeriOku_i("Puan") + 200); // puan ekleme
                     Debug.Log("Kazandin");
                 }
             }
@@ -106,20 +119,20 @@ public class GameManager : MonoBehaviour
         {
             case "Carpma":
 
-                Matematiksel_islemler.Carpma(GelenSayi, Karakterler, Pozisyon,OlusmaEfektleri);
+                _Matematiksel_islemler.Carpma(GelenSayi, Karakterler, Pozisyon,OlusmaEfektleri);
                
                 break;
 
             case "Toplama":
 
-                Matematiksel_islemler.Toplama(GelenSayi, Karakterler, Pozisyon,OlusmaEfektleri);
+                _Matematiksel_islemler.Toplama(GelenSayi, Karakterler, Pozisyon,OlusmaEfektleri);
 
                 break;
 
 
             case "Cikartma":
 
-                Matematiksel_islemler.Cikartma(GelenSayi, Karakterler, YokOlmaEfektleri);
+                _Matematiksel_islemler.Cikartma(GelenSayi, Karakterler, YokOlmaEfektleri);
                
                
                 break;
@@ -128,7 +141,7 @@ public class GameManager : MonoBehaviour
 
 
             case "Bolme":
-                Matematiksel_islemler.Bolme(GelenSayi, Karakterler, YokOlmaEfektleri);
+                _Matematiksel_islemler.Bolme(GelenSayi, Karakterler, YokOlmaEfektleri);
 
 
                 break;
@@ -145,6 +158,7 @@ public class GameManager : MonoBehaviour
                 item.SetActive(true);
                 item.transform.position = Pozisyon;
                 item.GetComponent<ParticleSystem>().Play();
+                item.GetComponent<AudioSource>().Play(); // karakter yok oldugu zaman muzik calmak icin yazdigimiz kod
                 if (!Durum)
                     AnlikKarakterSayisi--;
                 else

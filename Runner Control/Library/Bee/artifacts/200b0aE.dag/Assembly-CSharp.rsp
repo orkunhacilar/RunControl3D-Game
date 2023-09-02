@@ -362,6 +362,7 @@
 "Assets/Modeller/DenizVeAda/Scripts/LowPolyWater.cs"
 "Assets/Script/AdamLekesi.cs"
 "Assets/Script/Alt_karakter.cs"
+"Assets/Script/BosKarakter.cs"
 "Assets/Script/Dusman.cs"
 "Assets/Script/GameManager.cs"
 "Assets/Script/Kamera.cs"

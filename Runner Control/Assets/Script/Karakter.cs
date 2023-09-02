@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; // SLIDER KULLANMAK ICIN EKLEDIK
 
 public class Karakter : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class Karakter : MonoBehaviour
     public Kamera _Kamera;
     public bool SonaGeldikmi;
     public GameObject Gidecegiyer;
+    public Slider _Slider;
+    public GameObject GecisNoktasi;
 
     private void FixedUpdate()
     {
@@ -15,16 +18,31 @@ public class Karakter : MonoBehaviour
         transform.Translate(Vector3.forward * .5f * Time.deltaTime); // Karakter dum duz ileri gitsin 
     }
 
+    private void Start()
+    {
+        float Fark = Vector3.Distance(transform.position, GecisNoktasi.transform.position); // Bana karakterim ile bitis noktasi arasindaki mesafeyi ver diyoruz. Distance float donduruyo .
+        _Slider.maxValue = Fark;
+    }
+
+
     // Update is called once per frame
     void Update()
     {
+        
 
-        if (SonaGeldikmi)
+        
+
+        if (SonaGeldikmi)  // sona geldiyse karakteri oraya kaydir gibi olan komut
         {
             transform.position = Vector3.Lerp(transform.position, Gidecegiyer.transform.position, .015f);
+            if (_Slider.value != 0)
+                _Slider.value -= .005f;
         }
         else // sona gelmediysek harakter ettirme komutlari aktif
         {
+            float Fark = Vector3.Distance(transform.position, GecisNoktasi.transform.position); // Bana karakterim ile bitis noktasi arasindaki mesafeyi ver diyoruz. Distance float donduruyo .
+            _Slider.value = Fark; // aldigin farki slider objeme at
+
             if (Input.GetKey(KeyCode.Mouse0)) // Mouse sol click basilirsa = Mouse0
             {
 
@@ -58,6 +76,13 @@ public class Karakter : MonoBehaviour
             _Kamera.SonaGeldikmi = true;
             _GameManager.DusmanlariTetikle();
             SonaGeldikmi = true;
+        }
+        else if (other.CompareTag("BosKarakter"))
+        {
+            _GameManager.Karakterler.Add(other.gameObject); // Bos karakter carparsa bizim alt karakter listesine ARRAYINE ekle dedik
+           
+            
+            
         }
     }
 
