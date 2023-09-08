@@ -362,6 +362,7 @@
 "Assets/AnaMenu_Manager.cs"
 "Assets/Level_Manager.cs"
 "Assets/Modeller/DenizVeAda/Scripts/LowPolyWater.cs"
+"Assets/Ozellestirme.cs"
 "Assets/Script/AdamLekesi.cs"
 "Assets/Script/Alt_karakter.cs"
 "Assets/Script/BosKarakter.cs"

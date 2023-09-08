@@ -68,6 +68,7 @@
     <Compile Include="Assets/Modeller/DenizVeAda/Scripts/LowPolyWater.cs" />
     <Compile Include="Assets/Script/Kutuphane.cs" />
     <Compile Include="Assets/Script/GameManager.cs" />
+    <Compile Include="Assets/Ozellestirme.cs" />
     <Compile Include="Assets/Level_Manager.cs" />
     <Compile Include="Assets/Script/Dusman.cs" />
     <Compile Include="Assets/Script/BosKarakter.cs" />

@@ -7,12 +7,15 @@ using Orkun;
 public class AnaMenu_Manager : MonoBehaviour
 {
     BellekYonetim _BellekYonetim = new BellekYonetim();
+    VeriYonetimi _VeriYonetim = new VeriYonetimi();
     public GameObject CikisPaneli;
+    public List<ItemBilgileri> _ItemBilgileri = new List<ItemBilgileri>();
 
     // Start is called before the first frame update
     void Start()
     {
         _BellekYonetim.KontrolEtmeveTanimlama();
+      //  _VeriYonetim.ilkKurulumDosyaOlusturmaa(_ItemBilgileri // diger  tum itemler bitince aktiflestir.
     }
 
     public void SahneYukle(int Index)
