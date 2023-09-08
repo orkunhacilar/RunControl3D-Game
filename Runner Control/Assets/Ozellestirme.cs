@@ -24,8 +24,10 @@ public class Ozellestirme : MonoBehaviour
     public Text SopaText;
     [Header("-------------MATERIAL")]
     public Material[] Materyaller;     // RENKLER oldugu icin Material arrayi aciyorum
+    public Material VarsayilanTema;
     public Button[] MateryalButonlari;
     public Text MaterialText;
+    public SkinnedMeshRenderer _Renderer;
 
     int SapkaIndex = -1;
     int SopaIndex = -1;
@@ -44,6 +46,10 @@ public class Ozellestirme : MonoBehaviour
 
         _BellekYonetim.VeriKaydet_int("AktifSapka", -1);
         _BellekYonetim.VeriKaydet_int("AktifSopa", -1);
+        _BellekYonetim.VeriKaydet_int("AktifTema", -1);
+
+
+        #region
 
 
         if (_BellekYonetim.VeriOku_i("AktifSapka") == -1){
@@ -60,9 +66,9 @@ public class Ozellestirme : MonoBehaviour
             SapkaIndex = _BellekYonetim.VeriOku_i("AktifSapka");
             Sapkalar[SapkaIndex].SetActive(true);
         }
+        #endregion
 
-
-
+        #region
         if (_BellekYonetim.VeriOku_i("AktifSopa") == -1)
         {
 
@@ -78,10 +84,27 @@ public class Ozellestirme : MonoBehaviour
             SopaIndex = _BellekYonetim.VeriOku_i("AktifSopa");
             Sopalar[SopaIndex].SetActive(true);
         }
+        #endregion
+
+        if (_BellekYonetim.VeriOku_i("AktifTema") == -1)
+        {
+            
+        
+            MaterialIndex = -1;
+            MaterialText.text = "No Theme";
+        }
+        else
+        {
+            MaterialIndex = _BellekYonetim.VeriOku_i("AktifTema");
+           
+            Material[] mats = _Renderer.materials; // Renk Degistirmek icin Yazdik kolay kod.
+            mats[0] = Materyaller[MaterialIndex];
+            _Renderer.materials = mats;
+        }
 
 
 
-        // _VeriYonetim.Save(_ItemBilgileri);
+        //_VeriYonetim.Save(_ItemBilgileri);
 
         _VeriYonetim.Load();
         _ItemBilgileri = _VeriYonetim.ListeyiAktar();
@@ -213,6 +236,86 @@ public class Ozellestirme : MonoBehaviour
         }
     }
 
+    public void Meterial_Yonbutonlari(string islem)
+    {
+        if (islem == "ileri")
+        {
+            if (MaterialIndex == -1)
+            {
+                MaterialIndex = 0;
+                Material[] mats = _Renderer.materials; // Renk Degistirmek icin Yazdik kolay kod.
+                mats[0] = Materyaller[MaterialIndex];
+                _Renderer.materials = mats;
+
+
+                
+               MaterialText.text = _ItemBilgileri[MaterialIndex + 6].Item_Ad;
+            }
+            else
+            {
+                
+                MaterialIndex++;
+                Material[] mats = _Renderer.materials; // Renk Degistirmek icin Yazdik kolay kod.
+                mats[0] = Materyaller[MaterialIndex];
+                _Renderer.materials = mats;
+
+
+                MaterialText.text = _ItemBilgileri[MaterialIndex + 6].Item_Ad;
+            }
+            //----------------------------------------
+
+            if (MaterialIndex == Materyaller.Length - 1)     // Son sapkaya geldigini anlamak icin yazdik
+                MateryalButonlari[1].interactable = false;  // daha ileri gitmesin diye butonu kapatiyoruz.
+            else
+                MateryalButonlari[1].interactable = true;
+
+            if (MaterialIndex != -1)
+            {
+                MateryalButonlari[0].interactable = true;
+            }
+        }
+        else
+        {
+            if (MaterialIndex != -1)
+            {
+                
+                MaterialIndex--;
+
+                if (MaterialIndex != -1)
+                {
+
+                    Material[] mats = _Renderer.materials; // Renk Degistirmek icin Yazdik kolay kod.
+                    mats[0] = Materyaller[MaterialIndex];
+                    _Renderer.materials = mats;
+
+                    MateryalButonlari[0].interactable = true;
+                    MaterialText.text = _ItemBilgileri[MaterialIndex + 6].Item_Ad;
+                }
+                else
+                {
+                    Material[] mats = _Renderer.materials; // Renk Degistirmek icin Yazdik kolay kod.
+                    mats[0] = VarsayilanTema;
+                    _Renderer.materials = mats;
+
+                    MateryalButonlari[0].interactable = false;
+                    MaterialText.text = "No Theme";
+                }
+            }
+            else
+            {
+                Material[] mats = _Renderer.materials; // Renk Degistirmek icin Yazdik kolay kod.
+                mats[0] = VarsayilanTema;
+                _Renderer.materials = mats;
+
+                MateryalButonlari[0].interactable = false;
+                MaterialText.text = "No Theme";
+            }
+            //----------------------------------------
+            if (MaterialIndex != Materyaller.Length - 1)
+                MateryalButonlari[1].interactable = true;
+
+        }
+    }
 
     public void islemPaneliCikart(int Index)
     {
