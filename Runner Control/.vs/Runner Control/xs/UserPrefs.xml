@@ -1,11 +1,4 @@
 ﻿<Properties StartupConfiguration="{9DB39626-74A6-0B30-2807-35F736B800FE}|">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b3b3f1df-3ab5-46ad-9814-d7e5b8165d1f" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Ozellestirme.cs">
     <Files>
       <File FileName="Assets/Script/Kamera.cs" />
@@ -13,10 +6,11 @@
       <File FileName="Assets/Script/Alt_karakter.cs" />
       <File FileName="Assets/Script/Karakter.cs" />
       <File FileName="Assets/Script/Dusman.cs" />
-      <File FileName="Assets/AnaMenu_Manager.cs" />
-      <File FileName="Assets/Level_Manager.cs" Line="34" Column="1" />
-      <File FileName="Assets/Script/Kutuphane.cs" Line="330" Column="1" />
-      <File FileName="Assets/Ozellestirme.cs" Line="115" Column="1" />
+      <File FileName="Assets/Level_Manager.cs" />
+      <File FileName="Assets/AnaMenu_Manager.cs" Line="43" Column="1" />
+      <File FileName="Assets/Script/Kutuphane.cs" Line="353" Column="1" />
+      <File FileName="Assets/Ozellestirme.cs" Line="56" Column="1" />
+      <File FileName="Assets/Script/BosKarakter.cs" Line="87" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,11 +18,17 @@
           <Node name="Runner Control">
             <Node name="Assets" expanded="True">
               <Node name="Script" expanded="True" />
-              <Node name="Ozellestirme.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="85936295-b9c7-4690-83e1-c89d68a1ba0a" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
