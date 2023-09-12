@@ -312,6 +312,14 @@ namespace Orkun
             {
                 PlayerPrefs.SetInt("SonLevel", 5);
                 PlayerPrefs.SetInt("Puan", 100);
+                PlayerPrefs.SetInt("AktifSapka", -1);
+                PlayerPrefs.SetInt("AktifSopa", -1);
+                PlayerPrefs.SetInt("AktifTema", -1);
+
+                PlayerPrefs.SetFloat("MenuSes", 1);
+                PlayerPrefs.SetFloat("MenuFx", 1);
+                PlayerPrefs.SetFloat("OyunSes", 1);
+
             }
         }
 
@@ -323,10 +331,7 @@ namespace Orkun
     }
 
 
-    public class Verilerimiz
-    {
-        public static List<ItemBilgileri> _ItemBilgileri = new List<ItemBilgileri>();
-    }
+   
 
 
     [Serializable]  // bu komut bu clasi liste araciligi ile kullanma + serilestirmemize yariyor.

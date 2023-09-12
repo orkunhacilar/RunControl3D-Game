@@ -10,21 +10,24 @@ public class AnaMenu_Manager : MonoBehaviour
     VeriYonetimi _VeriYonetim = new VeriYonetimi();
     public GameObject CikisPaneli;
     public List<ItemBilgileri> _ItemBilgileri = new List<ItemBilgileri>();
+    public AudioSource ButonSes;
 
     // Start is called before the first frame update
     void Start()
     {
         _BellekYonetim.KontrolEtmeveTanimlama();
-      //  _VeriYonetim.ilkKurulumDosyaOlusturmaa(_ItemBilgileri // diger  tum itemler bitince aktiflestir.
+        _VeriYonetim.ilkKurulumDosyaOlusturmaa(_ItemBilgileri); // diger  tum itemler bitince aktiflestir.
     }
 
     public void SahneYukle(int Index)
     {
+        ButonSes.Play();
         SceneManager.LoadScene(Index);
     }
 
     public void Oyna()
     {
+        ButonSes.Play();
         SceneManager.LoadScene(_BellekYonetim.VeriOku_i("SonLevel"));
     }
 
@@ -32,6 +35,7 @@ public class AnaMenu_Manager : MonoBehaviour
 
     public void CikisButonIslem(string durum)
     {
+        ButonSes.Play();
         if (durum == "Evet")
             Application.Quit();  // Bir uygulamayi kapatma metodu
         else if (durum == "cikis")

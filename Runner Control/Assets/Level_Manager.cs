@@ -16,6 +16,7 @@ public class Level_Manager : MonoBehaviour
     public Sprite KilitButon;
 
     BellekYonetim _BellekYonetim = new BellekYonetim();
+    public AudioSource ButonSes;
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +50,7 @@ public class Level_Manager : MonoBehaviour
 
     public void SahneYukle(int Index)
     {
+        ButonSes.Play();
       SceneManager.LoadScene(Index);
       
        
@@ -58,6 +60,7 @@ public class Level_Manager : MonoBehaviour
 
     public void GeriDon()
     {
+        ButonSes.Play();
         SceneManager.LoadScene(0);
     }
 }

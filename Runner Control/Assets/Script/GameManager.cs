@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Orkun;
 using static UnityEditor.Progress;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,20 +24,31 @@ public class GameManager : MonoBehaviour
     public GameObject _Anakarakter;
     public bool OyunBittimi;
     bool SonaGeldikmi;
+    [Header("-------------SAPKALAR")]
+    public GameObject[] Sapkalar;
+    [Header("-------------Sopalar")]
+    public GameObject[] Sopalar;
+    [Header("-------------Materyaller")]
+    public Material[] Materyaller;
+    
+    public SkinnedMeshRenderer _Renderer;
+    public Material VarsayilanTema;
 
     Matematiksel_islemler _Matematiksel_islemler = new Matematiksel_islemler();
     BellekYonetim _BellekYonetim = new BellekYonetim();
 
+    Scene _Scene;
 
+    private void Awake()
+    {
+        Destroy(GameObject.FindWithTag("MenuSes"));
+        ItemleriKontrolEt();
+    }
 
     void Start()
     {
         DusmanlariOlustur();
-
-      
-
-        Debug.Log(_BellekYonetim.VeriOku_i("Puan"));
-       
+        _Scene = SceneManager.GetActiveScene(); //aktif olan sahnemi al ve _Scenenin icine at
     }
 
     public void DusmanlariOlustur()
@@ -104,14 +116,21 @@ public class GameManager : MonoBehaviour
                 {
                     if (AnlikKarakterSayisi > 5)
                     {
-                        _BellekYonetim.VeriKaydet_int("Puan", _BellekYonetim.VeriOku_i("Puan") + 600); // puan ekleme
-                        _BellekYonetim.VeriKaydet_int("SonLevel", _BellekYonetim.VeriOku_i("SonLevel") + 1);
+
+                        if (_Scene.buildIndex == _BellekYonetim.VeriOku_i("SonLevel"))
+                        {
+                            _BellekYonetim.VeriKaydet_int("Puan", _BellekYonetim.VeriOku_i("Puan") + 600); // puan ekleme
+                            _BellekYonetim.VeriKaydet_int("SonLevel", _BellekYonetim.VeriOku_i("SonLevel") + 1);
+                        }
                     }
-                  
+                          
                     else
                     {
-                        _BellekYonetim.VeriKaydet_int("Puan", _BellekYonetim.VeriOku_i("Puan") + 200); // puan ekleme
-                        _BellekYonetim.VeriKaydet_int("SonLevel", _BellekYonetim.VeriOku_i("SonLevel") + 1);
+                        if (_Scene.buildIndex == _BellekYonetim.VeriOku_i("SonLevel"))
+                        {
+                            _BellekYonetim.VeriKaydet_int("Puan", _BellekYonetim.VeriOku_i("Puan") + 200); // puan ekleme
+                            _BellekYonetim.VeriKaydet_int("SonLevel", _BellekYonetim.VeriOku_i("SonLevel") + 1);
+                        }
 
                     }
 
@@ -196,6 +215,32 @@ public class GameManager : MonoBehaviour
 
         if(!OyunBittimi)
             SavasDurumu();
+    }
+
+    public void ItemleriKontrolEt()
+    {
+
+        if (_BellekYonetim.VeriOku_i("AktifSapka") != -1)
+            Sapkalar[_BellekYonetim.VeriOku_i("AktifSapka")].SetActive(true);
+
+        if(_BellekYonetim.VeriOku_i("AktifSopa") != -1)
+            Sapkalar[_BellekYonetim.VeriOku_i("AktifSopa")].SetActive(true);
+
+        if(_BellekYonetim.VeriOku_i("AktifTema") != -1)
+        {
+            Material[] mats = _Renderer.materials;
+            mats[0] = Materyaller[_BellekYonetim.VeriOku_i("AktifTema")];
+            _Renderer.materials = mats;
+        }
+        else
+        {
+            Material[] mats = _Renderer.materials;
+            mats[0] = VarsayilanTema;
+            _Renderer.materials = mats;
+        }
+
+
+
     }
 
     

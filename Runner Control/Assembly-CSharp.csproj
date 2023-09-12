@@ -59,15 +59,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Script/Pervane.cs" />
+    <Compile Include="Assets/MenuSes.cs" />
     <Compile Include="Assets/AnaMenu_Manager.cs" />
     <Compile Include="Assets/Script/Ruzgar.cs" />
     <Compile Include="Assets/Script/AdamLekesi.cs" />
+    <Compile Include="Assets/Animatoricin.cs" />
     <Compile Include="Assets/Script/Karakter.cs" />
     <Compile Include="Assets/Script/Alt_karakter.cs" />
     <Compile Include="Assets/Script/Kamera.cs" />
+    <Compile Include="Assets/Animatoricn.cs" />
     <Compile Include="Assets/Modeller/DenizVeAda/Scripts/LowPolyWater.cs" />
     <Compile Include="Assets/Script/Kutuphane.cs" />
     <Compile Include="Assets/Script/GameManager.cs" />
+    <Compile Include="Assets/Ayarlar_Manager.cs" />
     <Compile Include="Assets/Ozellestirme.cs" />
     <Compile Include="Assets/Level_Manager.cs" />
     <Compile Include="Assets/Script/Dusman.cs" />
