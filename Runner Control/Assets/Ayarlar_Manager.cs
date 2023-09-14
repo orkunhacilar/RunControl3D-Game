@@ -20,11 +20,7 @@ public class Ayarlar_Manager : MonoBehaviour
         OyunSes.value = _Bellekyonetim.VeriOku_f("OyunSes");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     public void SesAyarla(string HangiAyar)
     {

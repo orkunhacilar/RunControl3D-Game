@@ -4,6 +4,7 @@ using UnityEngine;
 using Orkun;
 using static UnityEditor.Progress;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -37,10 +38,17 @@ public class GameManager : MonoBehaviour
     Matematiksel_islemler _Matematiksel_islemler = new Matematiksel_islemler();
     BellekYonetim _BellekYonetim = new BellekYonetim();
 
+    [Header("-------------GENEL VERILER")]
     Scene _Scene;
+    public AudioSource[] Sesler;
+    public GameObject[] islemPanelleri;
+    public Slider OyunSesiAyar;    //slider
 
     private void Awake()
     {
+        Sesler[0].volume = _BellekYonetim.VeriOku_f("OyunSes");
+        OyunSesiAyar.value = _BellekYonetim.VeriOku_f("OyunSes"); // slider degeri ile oyun sesini esitlemem lazim
+        Sesler[1].volume = _BellekYonetim.VeriOku_f("MenuFx");
         Destroy(GameObject.FindWithTag("MenuSes"));
         ItemleriKontrolEt();
     }
@@ -243,8 +251,55 @@ public class GameManager : MonoBehaviour
 
     }
 
-    
+    public void CikisButonIslem(string durum)
+    {
+        Sesler[1].Play();
+        Time.timeScale = 0; // dersem zamani durdugumuz icin oyunuda durdurmus olduk.
+        if (durum == "durdur")
+        {
+            islemPanelleri[0].SetActive(true);
+        }
+        else if (durum == "devamet")
+        {
+            islemPanelleri[0].SetActive(false);
+            Time.timeScale = 1;
+        }else if(durum == "tekrar")
+        {
+            SceneManager.LoadScene(_Scene.buildIndex); //Icinde bulundugum sahneyi zaten _Scene'e atmistik ordan kullanip bu sayfayi tekrar yukle dedik
+            Time.timeScale = 1;
+
+        }else if(durum == "Anasayfa")
+        {
+            SceneManager.LoadScene(0); // ana sayfayi yukle
+            Time.timeScale = 1;
+        }
 
 
-    
+    }
+
+    public void Ayarlar(string durum)
+    {
+        if(durum == "ayarla")
+        {
+            islemPanelleri[1].SetActive(true);
+            Time.timeScale = 0;
+
+        }
+        else
+        {
+            islemPanelleri[1].SetActive(false);
+            Time.timeScale = 1;
+        }
+    }
+
+    public void SesiAyarla()
+    {
+        _BellekYonetim.VeriKaydet_float("OyunSes", OyunSesiAyar.value); // oyun sesini kaydet diyorum aldigim veri ile
+        Sesler[0].volume = OyunSesiAyar.value; // sesi kaydettikten sonra sesi hemen o degere cevir diyip mudahale ediyorum
+    }
+
+
+
+
+
 }

@@ -1,22 +1,20 @@
 ﻿<Properties StartupConfiguration="{9DB39626-74A6-0B30-2807-35F736B800FE}|">
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4b4488df-0717-4c50-9f7d-929c6bf470f8" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Ozellestirme.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameManager.cs">
     <Files>
       <File FileName="Assets/Script/Kamera.cs" />
-      <File FileName="Assets/Script/GameManager.cs" />
+      <File FileName="Assets/Script/GameManager.cs" Line="306" Column="1" />
       <File FileName="Assets/Script/Alt_karakter.cs" />
       <File FileName="Assets/Script/Karakter.cs" />
       <File FileName="Assets/Script/Dusman.cs" />
-      <File FileName="Assets/Level_Manager.cs" />
-      <File FileName="Assets/AnaMenu_Manager.cs" />
+      <File FileName="Assets/Ozellestirme.cs" Line="66" Column="59" />
+      <File FileName="Assets/Level_Manager.cs" Line="11" Column="43" />
       <File FileName="Assets/Script/Kutuphane.cs" />
-      <File FileName="Assets/Ozellestirme.cs" Line="97" Column="15" />
-      <File FileName="Assets/Script/BosKarakter.cs" />
+      <File FileName="Assets/Script/BosKarakter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Animatoricin.cs" />
+      <File FileName="Assets/AnaMenu_Manager.cs" Line="38" Column="4" />
+      <File FileName="Assets/MenuSes.cs" Line="15" Column="9" />
+      <File FileName="Assets/Ayarlar_Manager.cs" Line="25" Column="5" />
+      <File FileName="Assets/Script/Pervane.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -30,5 +28,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="91cee21a-6ccb-43bb-a03d-aec3ea7056a4" />
 </Properties>

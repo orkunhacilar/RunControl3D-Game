@@ -60,6 +60,11 @@ public class Ozellestirme : MonoBehaviour
         DurumuKontrolEt(0,true);
         DurumuKontrolEt(1, true);
         DurumuKontrolEt(2, true);
+
+        foreach(var item in Sesler)
+        {
+            item.volume = _BellekYonetim.VeriOku_f("MenuFx");
+        }
     }
 
 

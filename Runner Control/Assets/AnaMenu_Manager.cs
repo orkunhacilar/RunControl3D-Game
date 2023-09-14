@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; // Sahnelerle islem yapiyosak import ediyoruz
 using Orkun;
+using System.Security.Cryptography;
 
 public class AnaMenu_Manager : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class AnaMenu_Manager : MonoBehaviour
     {
         _BellekYonetim.KontrolEtmeveTanimlama();
         _VeriYonetim.ilkKurulumDosyaOlusturmaa(_ItemBilgileri); // diger  tum itemler bitince aktiflestir.
+        ButonSes.volume = _BellekYonetim.VeriOku_f("MenuFx");
     }
 
     public void SahneYukle(int Index)

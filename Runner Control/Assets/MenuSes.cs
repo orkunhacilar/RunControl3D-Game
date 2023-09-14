@@ -12,7 +12,7 @@ public class MenuSes : MonoBehaviour
     void Start()
     {
        
-       // Ses.volume = PlayerPrefs.GetFloat("MenuSes"); // buraya gelicem
+        Ses.volume = PlayerPrefs.GetFloat("MenuSes"); 
         DontDestroyOnLoad(gameObject); // bu objeyi sahneler arasinda gecislerde kaybetmiceksin dedik.
 
         if (instance == null)
@@ -24,6 +24,6 @@ public class MenuSes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Ses.volume = PlayerPrefs.GetFloat("MenuSes");
     }
 }

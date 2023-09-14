@@ -21,7 +21,8 @@ public class Level_Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        ButonSes.volume = _BellekYonetim.VeriOku_f("MenuFx");
 
         int mevcutLevel = _BellekYonetim.VeriOku_i("SonLevel") - 4;  //5  ci lv 1 oldugu icin 4 cikararak kacinci lvde oldugumuzu anliyorum
                                                                      // 5
