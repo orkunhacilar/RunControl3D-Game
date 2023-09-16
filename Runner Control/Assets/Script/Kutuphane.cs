@@ -308,6 +308,7 @@ namespace Orkun
 
         public void KontrolEtmeveTanimlama()
         {
+            // OYUN BASLARKEN BASLANGIC DEGERLERI OLARAK BUNLARIN HEPSINI KAYDEDITYORUZ.
             if (!PlayerPrefs.HasKey("SonLevel")) // Eger kaydedili bir lv yoksa bu oyuna yeni girdigini gosterir ve set int ile 5 kaydediyorum neden 5 build settings ilk lv 5. sira.
             {
                 PlayerPrefs.SetInt("SonLevel", 5);
@@ -319,6 +320,7 @@ namespace Orkun
                 PlayerPrefs.SetFloat("MenuSes", 1);
                 PlayerPrefs.SetFloat("MenuFx", 1);
                 PlayerPrefs.SetFloat("OyunSes", 1);
+                PlayerPrefs.SetString("Dil", "EN");
 
             }
         }
@@ -378,7 +380,7 @@ namespace Orkun
         }
 
 
-        public void ilkKurulumDosyaOlusturmaa(List<ItemBilgileri> _ItemBilgileri)
+        public void ilkKurulumDosyaOlusturma(List<ItemBilgileri> _ItemBilgileri, List<DilVerileriAnaObje> _DilVerileri)
         {
             if (!File.Exists(Application.persistentDataPath + "/ItemVerileri.gd")) // eger dosya yoksa ilk kez olustur
             {
@@ -388,6 +390,55 @@ namespace Orkun
                 file.Close(); // isimiz bittiginde dosyayi kapatiyoruz.
             }
 
+            if (!File.Exists(Application.persistentDataPath + "/DilVerileri.gd")) // eger dosya yoksa ilk kez olustur
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Create(Application.persistentDataPath + "/DilVerileri.gd"); //dosya olusturduk
+                bf.Serialize(file, _DilVerileri); // verileri yaziyoruz
+                file.Close(); // isimiz bittiginde dosyayi kapatiyoruz.
+            }
+
         }
+
+
+        //-------------------------
+        List<DilVerileriAnaObje> _DilVerileriicListe;
+
+        public void Dil_Load()
+        {
+            if (File.Exists(Application.persistentDataPath + "/DilVerileri.gd")) //her zaman bakiyorum dosyam var mi yok mu ? silinmis olabilir cunku
+            {
+
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Open(Application.persistentDataPath + "/DilVerileri.gd", FileMode.Open); //dosya olusturduk
+                _DilVerileriicListe = (List<DilVerileriAnaObje>)bf.Deserialize(file); //File okuyup int cast ettik.
+                file.Close(); // isimiz bittiginde dosyayi kapatiyoruz.
+            }
+        }
+
+        public List<DilVerileriAnaObje> DilVerileriListeyiAktar()
+        {
+            return _DilVerileriicListe;
+        }
+
     }
+
+
+    //-----------DIL YONETIMI
+
+    [Serializable]  // bu komut bu clasi liste araciligi ile kullanma + serilestirmemize yariyor.
+    public class DilVerileriAnaObje
+    {
+        
+        public List<DilVerileri_TR> _DilVerileri_TR = new List<DilVerileri_TR>(); // class tutan bir list yaptik tutugumuz class diller ile alakali
+        public List<DilVerileri_TR> _DilVerileri_EN = new List<DilVerileri_TR>(); // class tutan bir list yaptik tutugumuz class diller ile alakali
+    }
+
+    [Serializable]  // bu komut bu clasi liste araciligi ile kullanma + serilestirmemize yariyor.
+    public class DilVerileri_TR
+    {
+        public string Metin;
+    }
+
+
 }

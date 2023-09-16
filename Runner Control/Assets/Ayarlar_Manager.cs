@@ -15,6 +15,8 @@ public class Ayarlar_Manager : MonoBehaviour
 
     void Start()
     {
+        ButonSes.volume = _Bellekyonetim.VeriOku_f("MenuFx");
+
         MenuSes.value = _Bellekyonetim.VeriOku_f("MenuSes");   //kayitli olan sesi cagir
         MenuFx.value = _Bellekyonetim.VeriOku_f("MenuFx");
         OyunSes.value = _Bellekyonetim.VeriOku_f("OyunSes");

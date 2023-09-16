@@ -28,36 +28,42 @@ public class Karakter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
-        
-
-        if (SonaGeldikmi)  // sona geldiyse karakteri oraya kaydir gibi olan komut
+        if (Time.timeScale != 0)
         {
-            transform.position = Vector3.Lerp(transform.position, Gidecegiyer.transform.position, .015f);
-            if (_Slider.value != 0)
-                _Slider.value -= .005f;
-        }
-        else // sona gelmediysek harakter ettirme komutlari aktif
-        {
-            float Fark = Vector3.Distance(transform.position, GecisNoktasi.transform.position); // Bana karakterim ile bitis noktasi arasindaki mesafeyi ver diyoruz. Distance float donduruyo .
-            _Slider.value = Fark; // aldigin farki slider objeme at
-
-            if (Input.GetKey(KeyCode.Mouse0)) // Mouse sol click basilirsa = Mouse0
+            if (SonaGeldikmi)  // sona geldiyse karakteri oraya kaydir gibi olan komut
             {
+                transform.position = Vector3.Lerp(transform.position, Gidecegiyer.transform.position, .015f);
+                if (_Slider.value != 0)
+                    _Slider.value -= .005f;
+            }
+            else // sona gelmediysek harakter ettirme komutlari aktif
+            {
+                float Fark = Vector3.Distance(transform.position, GecisNoktasi.transform.position); // Bana karakterim ile bitis noktasi arasindaki mesafeyi ver diyoruz. Distance float donduruyo .
+                _Slider.value = Fark; // aldigin farki slider objeme at
 
-                // Mouse X in konumuna bak ve 0 dan kucuk ya da buyukse Lerp Metodu ile saga sola kay demek icin yazdigimiz kod !
-                if (Input.GetAxis("Mouse X") < 0)
+
+                if (Input.GetKey(KeyCode.Mouse0)) // Mouse sol click basilirsa = Mouse0
                 {
-                    transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x - .1f, transform.position.y, transform.position.z), .3f);
+
+                    // Mouse X in konumuna bak ve 0 dan kucuk ya da buyukse Lerp Metodu ile saga sola kay demek icin yazdigimiz kod !
+                    if (Input.GetAxis("Mouse X") < 0)
+                    {
+                        transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x - .1f, transform.position.y, transform.position.z), .3f);
+                    }
+                    if (Input.GetAxis("Mouse X") > 0)
+                    {
+                        transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x + .1f, transform.position.y, transform.position.z), .3f);
+                    }
+
                 }
-                if (Input.GetAxis("Mouse X") > 0)
-                {
-                    transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x + .1f, transform.position.y, transform.position.z), .3f);
-                }
+
 
             }
         }
+
+
+           
 
        
         

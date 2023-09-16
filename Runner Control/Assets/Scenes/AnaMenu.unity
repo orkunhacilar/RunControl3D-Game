@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CikisPaneli: {fileID: 1737590873356900021}
-  _ItemBilgileri:
+  _Varsayilan_ItemBilgileri:
   - GrupIndex: 1
     Item_Index: 0
     Item_Ad: Hat 1
@@ -363,7 +363,87 @@ MonoBehaviour:
     Item_Ad: Theme 4
     Puan: 800
     SatinAlmaDurumu: 0
+  _Varsayilan_DilVerileri:
+  - _DilVerileri_TR:
+    - Metin: OYNA
+    - Metin: OZELLESTIR
+    - Metin: LEVEL SEC
+    - Metin: MARKET
+    - Metin: AYARLAR
+    - Metin: CIKIS
+    - Metin: EMIN MISIN ?
+    - Metin: HAYIR
+    - Metin: EVET
+    _DilVerileri_EN:
+    - Metin: PLAY
+    - Metin: CUSTOMIZE
+    - Metin: CHOOSE YOUR LEVEL
+    - Metin: SHOP
+    - Metin: SETTINGS
+    - Metin: EXIT
+    - Metin: ARE YOU SURE ?
+    - Metin: NO
+    - Metin: YES
+  - _DilVerileri_TR:
+    - Metin: SAPKA
+    - Metin: SOPA
+    - Metin: TEMA
+    - Metin: GERI DON
+    - Metin: ITEM YOK
+    - Metin: SATIN AL
+    - Metin: KAYDET
+    _DilVerileri_EN:
+    - Metin: HAT
+    - Metin: BAT
+    - Metin: THEME
+    - Metin: TURN BACK
+    - Metin: NO ITEM
+    - Metin: BUY
+    - Metin: SAVE
+  - _DilVerileri_TR:
+    - Metin: LEVEL SEC
+    _DilVerileri_EN:
+    - Metin: SELECT LEVEL
+  - _DilVerileri_TR:
+    - Metin: ALISVERIS
+    _DilVerileri_EN:
+    - Metin: SHOPPING
+  - _DilVerileri_TR:
+    - Metin: AYARLAR
+    - Metin: MENU SESI
+    - Metin: MENU FX
+    - Metin: OYUN SESI
+    - Metin: DIL
+    _DilVerileri_EN:
+    - Metin: SETTINGS
+    - Metin: MENU SOUND
+    - Metin: MENU FX
+    - Metin: GAME SOUND
+    - Metin: LANGUAGE
+  - _DilVerileri_TR:
+    - Metin: AYARLAR
+    - Metin: OYUN SESI
+    - Metin: OYUN DURAKLATILDI
+    - Metin: KAZANDIN
+    - Metin: KAYBETTIN
+    _DilVerileri_EN:
+    - Metin: SETTINGS
+    - Metin: GAME SOUND
+    - Metin: GAME PAUSED
+    - Metin: YOU WIN
+    - Metin: YOU LOSE
   ButonSes: {fileID: 297662160}
+  _DilVerileriAnaObje: []
+  TextObjeleri:
+  - {fileID: 1987966927}
+  - {fileID: 88356602}
+  - {fileID: 1697037996}
+  - {fileID: 1784659279}
+  - {fileID: 70371664}
+  - {fileID: 501760525}
+  - {fileID: 6428932729020294308}
+  - {fileID: 3053767585635527494}
+  - {fileID: 6834754643146543961}
 --- !u!4 &297662159
 Transform:
   m_ObjectHideFlags: 0
