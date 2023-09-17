@@ -7,8 +7,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Orkun
 {
-    
-
     public class Matematiksel_islemler 
     {
 
@@ -273,8 +271,6 @@ namespace Orkun
     public class BellekYonetim
     {
 
-        Ozellestirme o = new Ozellestirme();
-
         public void VeriKaydet_string(string Key, string value)
         {
             PlayerPrefs.SetString(Key, value);
@@ -320,9 +316,6 @@ namespace Orkun
                 PlayerPrefs.SetInt("AktifSapka", -1);
                 PlayerPrefs.SetInt("AktifSopa", -1);
                 PlayerPrefs.SetInt("AktifTema", -1);
-
-               
-
 
                 PlayerPrefs.SetFloat("MenuSes", 1);
                 PlayerPrefs.SetFloat("MenuFx", 1);
