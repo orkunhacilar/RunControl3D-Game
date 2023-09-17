@@ -5,6 +5,7 @@ using Orkun;
 using static UnityEditor.Progress;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -37,12 +38,19 @@ public class GameManager : MonoBehaviour
 
     Matematiksel_islemler _Matematiksel_islemler = new Matematiksel_islemler();
     BellekYonetim _BellekYonetim = new BellekYonetim();
+    VeriYonetimi _VeriYonetim = new VeriYonetimi();
 
     [Header("-------------GENEL VERILER")]
     Scene _Scene;
     public AudioSource[] Sesler;
     public GameObject[] islemPanelleri;
     public Slider OyunSesiAyar;    //slider
+    public List<DilVerileriAnaObje> _DilVerileriAnaObje = new List<DilVerileriAnaObje>(); // Kutuphane classinda yazili olan bir class listesi tutan classi bizde list seklinde aldik.
+    List<DilVerileriAnaObje> _DilOkunanVeriler = new List<DilVerileriAnaObje>();
+    public Text[] TextObjeleri;
+    [Header("-------------LOADING VERILER")]
+    public GameObject YuklemeEkrani;
+    public Slider YuklemeSlider;
 
     private void Awake()
     {
@@ -57,6 +65,30 @@ public class GameManager : MonoBehaviour
     {
         DusmanlariOlustur();
         _Scene = SceneManager.GetActiveScene(); //aktif olan sahnemi al ve _Scenenin icine at
+        
+
+        _VeriYonetim.Dil_Load();
+        _DilOkunanVeriler = _VeriYonetim.DilVerileriListeyiAktar();
+        _DilVerileriAnaObje.Add(_DilOkunanVeriler[5]);
+        DilTercihiYonetimi();
+    }
+
+    void DilTercihiYonetimi()
+    {
+        if (_BellekYonetim.VeriOku_s("Dil") == "TR")
+        {
+            for (int i = 0; i < TextObjeleri.Length; i++) // GIT BENIM TEXT OBJELERIMI GEZ
+            {
+                TextObjeleri[i].text = _DilVerileriAnaObje[0]._DilVerileri_TR[i].Metin; // DIL VERILERI ANA OBJE[0] CUNKU ANA EKRANDAYIZ ONDAN SONRASINI ZATEN OKURSUN KOLAY
+            }
+        }
+        else
+        {
+            for (int i = 0; i < TextObjeleri.Length; i++) // GIT BENIM TEXT OBJELERIMI GEZ
+            {
+                TextObjeleri[i].text = _DilVerileriAnaObje[0]._DilVerileri_EN[i].Metin; // DIL VERILERI ANA OBJE[0] CUNKU ANA EKRANDAYIZ ONDAN SONRASINI ZATEN OKURSUN KOLAY
+            }
+        }
     }
 
     public void DusmanlariOlustur()
@@ -118,7 +150,7 @@ public class GameManager : MonoBehaviour
 
                 if (AnlikKarakterSayisi < KacDusmanOlsun || AnlikKarakterSayisi == KacDusmanOlsun)
                 {
-                    Debug.Log("Kaybettin");
+                    islemPanelleri[3].SetActive(true);
                 }
                 else
                 {
@@ -142,7 +174,7 @@ public class GameManager : MonoBehaviour
 
                     }
 
-                    Debug.Log("Kazandin");
+                    islemPanelleri[2].SetActive(true);
                 }
             }
         }
@@ -296,6 +328,31 @@ public class GameManager : MonoBehaviour
     {
         _BellekYonetim.VeriKaydet_float("OyunSes", OyunSesiAyar.value); // oyun sesini kaydet diyorum aldigim veri ile
         Sesler[0].volume = OyunSesiAyar.value; // sesi kaydettikten sonra sesi hemen o degere cevir diyip mudahale ediyorum
+    }
+
+    public void SonrakiLevel()
+    {
+      
+
+        StartCoroutine(LoadAsync(_Scene.buildIndex + 1));
+    }
+
+    IEnumerator LoadAsync(int SceneIndex)
+    {
+
+        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneIndex); // Bu Komutta diyoruz ki bu sahnemi yukle ama yukerken %30 yuklendi %40 yuklendi gibi olan degeri takip et ve o degeri Op ye aktar.
+
+        YuklemeEkrani.SetActive(true);
+
+        while (!operation.isDone) // Sahne yuklenmedigi surece diyoruz devam et
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f); // 0 a ya da 1 tamamlama icin yuvarlama islemi
+
+
+            YuklemeSlider.value = progress;
+            yield return null;
+        }
+
     }
 
 

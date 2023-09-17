@@ -1,31 +1,25 @@
 ﻿<Properties StartupConfiguration="{9DB39626-74A6-0B30-2807-35F736B800FE}|">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Ozellestirme.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameManager.cs">
     <Files>
       <File FileName="Assets/Script/Kamera.cs" />
-      <File FileName="Assets/Script/GameManager.cs" Line="306" Column="1" />
       <File FileName="Assets/Script/Alt_karakter.cs" />
-      <File FileName="Assets/Script/Karakter.cs" Line="31" Column="1" />
+      <File FileName="Assets/Script/Karakter.cs" />
       <File FileName="Assets/Script/Dusman.cs" />
-      <File FileName="Assets/Ozellestirme.cs" Line="14" Column="26" />
-      <File FileName="Assets/Level_Manager.cs" Line="23" Column="6" />
-      <File FileName="Assets/Script/BosKarakter.cs" />
+      <File FileName="Assets/Script/BosKarakter.cs" Line="1" Column="1" />
       <File FileName="Assets/Animatoricin.cs" />
       <File FileName="Assets/Script/Kutuphane.cs" Line="363" Column="42" />
-      <File FileName="Assets/AnaMenu_Manager.cs" Line="19" Column="81" />
       <File FileName="Assets/MenuSes.cs" />
-      <File FileName="Assets/Ayarlar_Manager.cs" />
+      <File FileName="Assets/Ozellestirme.cs" Line="64" Column="34" />
+      <File FileName="Assets/Ayarlar_Manager.cs" Line="62" Column="1" />
+      <File FileName="Assets/AnaMenu_Manager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Level_Manager.cs" Line="86" Column="6" />
+      <File FileName="Assets/Script/GameManager.cs" Line="54" Column="1" />
       <File FileName="Assets/Script/Pervane.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Runner Control">
+          <Node name="Runner Control" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Script" expanded="True" />
             </Node>
@@ -34,5 +28,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="76cc0b48-8f09-41aa-b912-0194c28f92ad" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0ea6681e-36d4-46d7-a55c-f17cfb14ecf4" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
 </Properties>

@@ -18,6 +18,9 @@ public class AnaMenu_Manager : MonoBehaviour
     public List<DilVerileriAnaObje> _DilVerileriAnaObje = new List<DilVerileriAnaObje>(); // Kutuphane classinda yazili olan bir class listesi tutan classi bizde list seklinde aldik.
     List<DilVerileriAnaObje> _DilOkunanVeriler = new List<DilVerileriAnaObje>();
     public Text[] TextObjeleri;
+    public GameObject YuklemeEkrani;
+    public Slider YuklemeSlider;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +34,7 @@ public class AnaMenu_Manager : MonoBehaviour
 
         // Debug.Log(_DilVerileriAnaObje[0]._DilVerileri_TR[3].Metin); // GIT LIST ICINDE LISTE ERIS ORDAKI DEGERI VER BAKALIM
 
-      //   _BellekYonetim.VeriKaydet_string("Dil", "TR"); // TR MI ISTIYON EN MI SECIYON ?
+         _BellekYonetim.VeriKaydet_string("Dil", "EN"); // TR MI ISTIYON EN MI SECIYON ?
 
         _VeriYonetim.Dil_Load();
         _DilOkunanVeriler = _VeriYonetim.DilVerileriListeyiAktar();
@@ -67,8 +70,29 @@ public class AnaMenu_Manager : MonoBehaviour
     public void Oyna()
     {
         ButonSes.Play();
-        SceneManager.LoadScene(_BellekYonetim.VeriOku_i("SonLevel"));
+        StartCoroutine(LoadAsync(_BellekYonetim.VeriOku_i("SonLevel")));
+
+
     }
+
+    IEnumerator LoadAsync(int SceneIndex)
+    {
+
+        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneIndex); // Bu Komutta diyoruz ki bu sahnemi yukle ama yukerken %30 yuklendi %40 yuklendi gibi olan degeri takip et ve o degeri Op ye aktar.
+
+        YuklemeEkrani.SetActive(true);
+
+        while (!operation.isDone) // Sahne yuklenmedigi surece diyoruz devam et
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f); // 0 a ya da 1 tamamlama icin yuvarlama islemi
+
+
+            YuklemeSlider.value = progress;
+            yield return null;
+        }
+
+    }
+
 
     
 

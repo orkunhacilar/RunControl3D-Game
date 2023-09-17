@@ -18,9 +18,23 @@ public class Level_Manager : MonoBehaviour
     BellekYonetim _BellekYonetim = new BellekYonetim();
     public AudioSource ButonSes;
 
+    public List<DilVerileriAnaObje> _DilVerileriAnaObje = new List<DilVerileriAnaObje>(); // Kutuphane classinda yazili olan bir class listesi tutan classi bizde list seklinde aldik.
+    List<DilVerileriAnaObje> _DilOkunanVeriler = new List<DilVerileriAnaObje>();
+    public Text[] TextObjeleri;
+    VeriYonetimi _VeriYonetim = new VeriYonetimi();
+
+    public GameObject YuklemeEkrani;
+    public Slider YuklemeSlider;
+
     // Start is called before the first frame update
     void Start()
     {
+     
+
+        _VeriYonetim.Dil_Load();
+        _DilOkunanVeriler = _VeriYonetim.DilVerileriListeyiAktar();
+        _DilVerileriAnaObje.Add(_DilOkunanVeriler[2]);
+        DilTercihiYonetimi();
 
         ButonSes.volume = _BellekYonetim.VeriOku_f("MenuFx");
 
@@ -47,14 +61,56 @@ public class Level_Manager : MonoBehaviour
             }
             Index++;
         }
+
+
+       
+    }
+
+
+    void DilTercihiYonetimi()
+    {
+        if (_BellekYonetim.VeriOku_s("Dil") == "TR")
+        {
+            for (int i = 0; i < TextObjeleri.Length; i++) // GIT BENIM TEXT OBJELERIMI GEZ
+            {
+                TextObjeleri[i].text = _DilVerileriAnaObje[0]._DilVerileri_TR[i].Metin; // DIL VERILERI ANA OBJE[0] CUNKU ANA EKRANDAYIZ ONDAN SONRASINI ZATEN OKURSUN KOLAY
+            }
+        }
+        else
+        {
+            for (int i = 0; i < TextObjeleri.Length; i++) // GIT BENIM TEXT OBJELERIMI GEZ
+            {
+                TextObjeleri[i].text = _DilVerileriAnaObje[0]._DilVerileri_EN[i].Metin; // DIL VERILERI ANA OBJE[0] CUNKU ANA EKRANDAYIZ ONDAN SONRASINI ZATEN OKURSUN KOLAY
+            }
+        }
     }
 
     public void SahneYukle(int Index)
     {
         ButonSes.Play();
-      SceneManager.LoadScene(Index);
-      
-       
+     
+        StartCoroutine(LoadAsync(Index));
+
+
+    }
+
+
+    IEnumerator LoadAsync(int SceneIndex)
+    {
+
+        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneIndex); // Bu Komutta diyoruz ki bu sahnemi yukle ama yukerken %30 yuklendi %40 yuklendi gibi olan degeri takip et ve o degeri Op ye aktar.
+
+        YuklemeEkrani.SetActive(true);
+
+        while (!operation.isDone) // Sahne yuklenmedigi surece diyoruz devam et
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f); // 0 a ya da 1 tamamlama icin yuvarlama islemi
+
+
+            YuklemeSlider.value = progress;
+            yield return null;
+        }
+
     }
 
 
