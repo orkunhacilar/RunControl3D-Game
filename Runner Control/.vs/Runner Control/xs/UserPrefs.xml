@@ -1,20 +1,21 @@
 ﻿<Properties StartupConfiguration="{9DB39626-74A6-0B30-2807-35F736B800FE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameManager.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Kutuphane.cs">
     <Files>
       <File FileName="Assets/Script/Kamera.cs" />
-      <File FileName="Assets/Script/Alt_karakter.cs" />
-      <File FileName="Assets/Script/Karakter.cs" />
-      <File FileName="Assets/Script/Dusman.cs" />
-      <File FileName="Assets/Script/BosKarakter.cs" Line="1" Column="1" />
-      <File FileName="Assets/Animatoricin.cs" />
-      <File FileName="Assets/Script/Kutuphane.cs" Line="363" Column="42" />
-      <File FileName="Assets/MenuSes.cs" />
-      <File FileName="Assets/Ozellestirme.cs" Line="64" Column="34" />
-      <File FileName="Assets/Ayarlar_Manager.cs" Line="62" Column="1" />
-      <File FileName="Assets/AnaMenu_Manager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Level_Manager.cs" Line="86" Column="6" />
-      <File FileName="Assets/Script/GameManager.cs" Line="54" Column="1" />
-      <File FileName="Assets/Script/Pervane.cs" />
+      <File FileName="Assets/Script/Alt_karakter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Karakter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Dusman.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/BosKarakter.cs" />
+      <File FileName="Assets/Script/Kutuphane.cs" Line="311" Column="1" />
+      <File FileName="Assets/Script/GameManager.cs" Line="281" Column="1" />
+      <File FileName="Assets/Script/Pervane.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Ayarlar_Manager.cs" Line="38" Column="27" />
+      <File FileName="Assets/Script/Level_Manager.cs" Line="64" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -29,10 +30,5 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0ea6681e-36d4-46d7-a55c-f17cfb14ecf4" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1e43f802-e483-4cde-9b78-13cd8ff9c4b0" />
 </Properties>

@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Orkun;
-using static UnityEditor.Progress;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -264,7 +262,7 @@ public class GameManager : MonoBehaviour
             Sapkalar[_BellekYonetim.VeriOku_i("AktifSapka")].SetActive(true);
 
         if(_BellekYonetim.VeriOku_i("AktifSopa") != -1)
-            Sapkalar[_BellekYonetim.VeriOku_i("AktifSopa")].SetActive(true);
+            Sopalar[_BellekYonetim.VeriOku_i("AktifSopa")].SetActive(true);
 
         if(_BellekYonetim.VeriOku_i("AktifTema") != -1)
         {
