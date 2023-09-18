@@ -947,3 +947,276 @@ Start importing Assets/Sprite/UI/Ozellestirme/OzellestirmeBar.png using Guid(eb5
  -> (artifact id: '416e33ce5a281a97d3171bb8e17308ee') in 0.009509 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 513.194908 seconds.
+  path: Assets/direk 1.fbx 2
+  artifactKey: Guid(a55a1992aafd0483782286e1fe22b434) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/direk 1.fbx 2 using Guid(a55a1992aafd0483782286e1fe22b434) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41ab9703e0479baa0e6f6e9f2fcda77b') in 0.000824 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 12.820626 seconds.
+  path: Assets/direk.fbx 2
+  artifactKey: Guid(c78340831b4844df58cf7a13441dc51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/direk.fbx 2 using Guid(c78340831b4844df58cf7a13441dc51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6350670a2a4fc3afc7ce945ecb1b36b') in 0.000745 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 80.588999 seconds.
+  path: Assets/Modeller/Material/item/Sopa_2.mat
+  artifactKey: Guid(566d4bb6e2f3345d4bb8ab9cc03b2d85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modeller/Material/item/Sopa_2.mat using Guid(566d4bb6e2f3345d4bb8ab9cc03b2d85) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+ -> (artifact id: '3bbd3fef7caf276fc4e2913a326137dd') in 0.119350 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Pixel Font - Tripfive/Textures & Materials/Tripfive-EX.mat
+  artifactKey: Guid(df856cdb9110140419b5d535c1a57636) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pixel Font - Tripfive/Textures & Materials/Tripfive-EX.mat using Guid(df856cdb9110140419b5d535c1a57636) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC6X6 UNorm format is not supported, decompressing texture
+ -> (artifact id: 'efef4f121e7e647fded75fb18e7ee021') in 0.042557 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Pixel Font - Tripfive/Textures & Materials/Tripfive-HS.mat
+  artifactKey: Guid(a8a2064660ecc42fab77221fa24060bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pixel Font - Tripfive/Textures & Materials/Tripfive-HS.mat using Guid(a8a2064660ecc42fab77221fa24060bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC6X6 UNorm format is not supported, decompressing texture
+ -> (artifact id: '28c0f91b3b0db7c412e9f7699d5b77d7') in 0.008133 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Pixel Font - Tripfive/Textures & Materials/Tripfive.mat
+  artifactKey: Guid(c81f8d7093fca4469b1d13a985e9ae72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pixel Font - Tripfive/Textures & Materials/Tripfive.mat using Guid(c81f8d7093fca4469b1d13a985e9ae72) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC6X6 UNorm format is not supported, decompressing texture
+ -> (artifact id: 'c798d740007af5961fdac835d75ef1dc') in 0.014287 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Modeller/Material/Zemin.mat
+  artifactKey: Guid(49b08c785729b1a48bd522b2ef0ad808) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modeller/Material/Zemin.mat using Guid(49b08c785729b1a48bd522b2ef0ad808) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+ -> (artifact id: 'aac219270e5a6d8f7275c17dfd1d68bc') in 0.111277 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 5.013281 seconds.
+  path: Assets/Sprite/UI/Ozellestirme/Materials/ninjaGorsel_3.mat
+  artifactKey: Guid(a570fffd4c22a4f0bb0b05eb2482ff42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/UI/Ozellestirme/Materials/ninjaGorsel_3.mat using Guid(a570fffd4c22a4f0bb0b05eb2482ff42) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+ -> (artifact id: '0c76572a36c1e43e883ec4f79c714a67') in 0.009020 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000118 seconds.
+  path: Assets/Modeller/Material/item/Sapka_2.mat
+  artifactKey: Guid(226fcaaf837e74ce4ad2a465ffefad39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modeller/Material/item/Sapka_2.mat using Guid(226fcaaf837e74ce4ad2a465ffefad39) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+ -> (artifact id: 'b9541e56ec5277fc31485fac16f2687d') in 0.009032 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/Modeller/Material/item/Sapka_1.mat
+  artifactKey: Guid(ffbfdf4b4436b4425a865a7091137e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modeller/Material/item/Sapka_1.mat using Guid(ffbfdf4b4436b4425a865a7091137e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+ -> (artifact id: '3d3ec84968ad9aa10d5c540e64d0884e') in 0.010493 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000102 seconds.
+  path: Assets/Modeller/Material/item/Sopa_1.mat
+  artifactKey: Guid(74cf18f7ec3a24a4da173a0bf532fd58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modeller/Material/item/Sopa_1.mat using Guid(74cf18f7ec3a24a4da173a0bf532fd58) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+ -> (artifact id: 'c3b16b5b45fd143cc1cbcfe9661bd220') in 0.007796 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/Modeller/Material/item/Sapka_3.mat
+  artifactKey: Guid(9832708634bb94ad281d5021fb7768b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modeller/Material/item/Sapka_3.mat using Guid(9832708634bb94ad281d5021fb7768b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+ -> (artifact id: '0dcf5067c3555a3a0b8598a26e9e44b2') in 0.015055 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Material/OlusmaEfekti.mat
+  artifactKey: Guid(a3b699fc67dd34242af7035d49d036a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Material/OlusmaEfekti.mat using Guid(a3b699fc67dd34242af7035d49d036a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+ -> (artifact id: '6cc263672f5c8571a6db947eca4329aa') in 0.009935 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 25.974034 seconds.
+  path: Assets/KarakterModeli/models/Materials/Ninja_3.mat
+  artifactKey: Guid(84c1ad0b1c5b245b1bf6a3283696bf21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/KarakterModeli/models/Materials/Ninja_3.mat using Guid(84c1ad0b1c5b245b1bf6a3283696bf21) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+ -> (artifact id: 'd30d33deb45636d1b798f9d92f133a3f') in 0.009368 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/Sprite/UI/Ozellestirme/Materials/Ninja_Sapka_1.mat
+  artifactKey: Guid(1b49ceeab989d4a30bceee4260a7cdbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/UI/Ozellestirme/Materials/Ninja_Sapka_1.mat using Guid(1b49ceeab989d4a30bceee4260a7cdbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+ -> (artifact id: '2a32b2a96b034fbea253a78281670a0b') in 0.008737 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Sprite/UI/Ozellestirme/Materials/Ninja_Sapka_3.mat
+  artifactKey: Guid(94ec3f7985f59411581d90917922cc17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/UI/Ozellestirme/Materials/Ninja_Sapka_3.mat using Guid(94ec3f7985f59411581d90917922cc17) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+ -> (artifact id: '5843c63b9a082bee61e6e588b7c868f1') in 0.016724 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.387877 seconds.
+  path: Assets/Modeller/E_modeller/ignelikutu.fbx
+  artifactKey: Guid(31a5bc7a54c634a8dae9e8f46ad189eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modeller/E_modeller/ignelikutu.fbx using Guid(31a5bc7a54c634a8dae9e8f46ad189eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccd73fcd2651ddafcafc22b2a773ccd8') in 0.261735 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 81
+========================================================================
+Received Import Request.
+  Time since last request: 0.216922 seconds.
+  path: Assets/Modeller/Material/Engeller_Gri.mat
+  artifactKey: Guid(ba90f364074974b4dacc9f3cc07c1326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modeller/Material/Engeller_Gri.mat using Guid(ba90f364074974b4dacc9f3cc07c1326) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+ -> (artifact id: '42b8099c2550527fe27cf1d1d23508ff') in 0.009874 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Modeller/Material/Engeller_Siyah.mat
+  artifactKey: Guid(a2ce7e234c02a45a5bcaaa57ec57a5a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modeller/Material/Engeller_Siyah.mat using Guid(a2ce7e234c02a45a5bcaaa57ec57a5a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+ -> (artifact id: '68ab2864893f5eb6392a8f4392ef0c3e') in 0.014539 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 318.505741 seconds.
+  path: Assets/Prefab/Harici/SayisalBlok.prefab
+  artifactKey: Guid(a95219495568d458b87908ac813f1023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Harici/SayisalBlok.prefab using Guid(a95219495568d458b87908ac813f1023) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+ -> (artifact id: 'c6b49c3462329968df56452aa2906d73') in 0.061822 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 85
+========================================================================
+Received Import Request.
+  Time since last request: 2.038069 seconds.
+  path: Assets/Prefab/Harici/Ada.prefab
+  artifactKey: Guid(40b2a46edcd6f4b81836e28e1e190b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Harici/Ada.prefab using Guid(40b2a46edcd6f4b81836e28e1e190b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+ -> (artifact id: '5411e4d66927e4110a2215e749bf40a9') in 0.183113 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 14.514157 seconds.
+  path: Assets/Prefab/Harici/SayisalBlok.prefab
+  artifactKey: Guid(a95219495568d458b87908ac813f1023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Harici/SayisalBlok.prefab using Guid(a95219495568d458b87908ac813f1023) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC4X4 UNorm format is not supported, decompressing texture
+ -> (artifact id: '53776f38d44a7246149a770960518d66') in 0.052647 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 93
+========================================================================
+Received Import Request.
+  Time since last request: 507.982462 seconds.
+  path: Assets/Modeller/E_modeller/ignelikutu.fbx
+  artifactKey: Guid(31a5bc7a54c634a8dae9e8f46ad189eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modeller/E_modeller/ignelikutu.fbx using Guid(31a5bc7a54c634a8dae9e8f46ad189eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3838a24c168d1c454460cb8335c1c5bf') in 0.209839 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 81
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/orkun.hacilar/Documents/GitHub/RunControl-Game/Runner Control/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/orkun.hacilar/Documents/GitHub/RunControl-Game/Runner Control/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.955 seconds
+Refreshing native plugins compatible for Editor in 1.54 ms, found 2 plugins.
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.208 seconds
+Domain Reload Profiling: 2163ms
+	BeginReloadAssembly (190ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (73ms)
+	RebuildCommonClasses (48ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (676ms)
+		LoadAssemblies (354ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (394ms)
+			TypeCache.Refresh (387ms)
+				TypeCache.ScanAssembly (376ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1208ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (377ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (37ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (54ms)
+			ProcessInitializeOnLoadAttributes (258ms)
+			ProcessInitializeOnLoadMethodAttributes (24ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 1.59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3118 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (31.7 KB). Loaded Objects now: 3702.
+Memory consumption went from 217.5 MB to 217.5 MB.
+Total: 3.997049 ms (FindLiveObjects: 0.377708 ms CreateObjectMapping: 0.237594 ms MarkObjects: 3.308460 ms  DeleteObjects: 0.072407 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
