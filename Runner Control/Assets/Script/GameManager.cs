@@ -264,7 +264,7 @@ public class GameManager : MonoBehaviour
             Sapkalar[_BellekYonetim.VeriOku_i("AktifSapka")].SetActive(true);
 
         if(_BellekYonetim.VeriOku_i("AktifSopa") != -1)
-            Sapkalar[_BellekYonetim.VeriOku_i("AktifSopa")].SetActive(true);
+            Sopalar[_BellekYonetim.VeriOku_i("AktifSopa")].SetActive(true);
 
         if(_BellekYonetim.VeriOku_i("AktifTema") != -1)
         {
