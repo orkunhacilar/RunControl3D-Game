@@ -18,8 +18,8 @@ public class Level_Manager : MonoBehaviour
     BellekYonetim _BellekYonetim = new BellekYonetim();
     public AudioSource ButonSes;
 
-    public List<DilVerileriAnaObje> _DilVerileriAnaObje = new List<DilVerileriAnaObje>(); // Kutuphane classinda yazili olan bir class listesi tutan classi bizde list seklinde aldik.
-    List<DilVerileriAnaObje> _DilOkunanVeriler = new List<DilVerileriAnaObje>();
+   // public List<DilVerileriAnaObje> _DilVerileriAnaObje = new List<DilVerileriAnaObje>(); // Kutuphane classinda yazili olan bir class listesi tutan classi bizde list seklinde aldik.
+   // List<DilVerileriAnaObje> _DilOkunanVeriler = new List<DilVerileriAnaObje>();
     public Text[] TextObjeleri;
     VeriYonetimi _VeriYonetim = new VeriYonetimi();
 
@@ -31,10 +31,10 @@ public class Level_Manager : MonoBehaviour
     {
      
 
-        _VeriYonetim.Dil_Load();
+       /* _VeriYonetim.Dil_Load();
         _DilOkunanVeriler = _VeriYonetim.DilVerileriListeyiAktar();
         _DilVerileriAnaObje.Add(_DilOkunanVeriler[2]);
-        DilTercihiYonetimi();
+        DilTercihiYonetimi(); */
 
         ButonSes.volume = _BellekYonetim.VeriOku_f("MenuFx");
 
@@ -47,7 +47,7 @@ public class Level_Manager : MonoBehaviour
                 // 1       4              ne demek demekki o lv ye kadar olanlari acmisim demek
             if (i + 1 <= mevcutLevel)
             {
-                Butonlar[i].GetComponentInChildren<Text>().text = Index.ToString();   // git diyorum acitigim lvlere ustlerine rakamlari yaz.
+                Butonlar[i].GetComponentInChildren<Text>().text = Index.ToString();  // git diyorum acitigim lvlere ustlerine rakamlari yaz.
                 // int Index = i + 1;
 
                 int SahneIndex = Index + 4;
@@ -59,7 +59,7 @@ public class Level_Manager : MonoBehaviour
                 // Butonlar[i].interactable = false;
                 Butonlar[i].enabled = false;
             }
-            Index++;
+           Index++;
         }
 
 
@@ -67,7 +67,7 @@ public class Level_Manager : MonoBehaviour
     }
 
 
-    void DilTercihiYonetimi()
+   /*  void DilTercihiYonetimi()
     {
         if (_BellekYonetim.VeriOku_s("Dil") == "TR")
         {
@@ -83,7 +83,7 @@ public class Level_Manager : MonoBehaviour
                 TextObjeleri[i].text = _DilVerileriAnaObje[0]._DilVerileri_EN[i].Metin; // DIL VERILERI ANA OBJE[0] CUNKU ANA EKRANDAYIZ ONDAN SONRASINI ZATEN OKURSUN KOLAY
             }
         }
-    }
+    } */
 
     public void SahneYukle(int Index)
     {

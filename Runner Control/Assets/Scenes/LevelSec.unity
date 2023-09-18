@@ -3037,7 +3037,6 @@ MonoBehaviour:
   Level: 0
   KilitButon: {fileID: 21300000, guid: c2ff7f2347c29432085a0c8453ac76cf, type: 3}
   ButonSes: {fileID: 1240476873}
-  _DilVerileriAnaObje: []
   TextObjeleri:
   - {fileID: 1802310479}
   - {fileID: 6318879006262225786}
