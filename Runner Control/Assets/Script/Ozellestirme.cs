@@ -55,7 +55,7 @@ public class Ozellestirme : MonoBehaviour
     {
       
         PuanText.text = _BellekYonetim.VeriOku_i("Puan").ToString();
-          _BellekYonetim.VeriKaydet_string("Dil", "EN"); // TR MI ISTIYON EN MI SECIYON ?
+         // _BellekYonetim.VeriKaydet_string("Dil", "EN"); // TR MI ISTIYON EN MI SECIYON ?
         _VeriYonetim.Load();
         _ItemBilgileri = _VeriYonetim.ListeyiAktar();
 
