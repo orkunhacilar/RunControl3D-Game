@@ -34,7 +34,7 @@ public class AnaMenu_Manager : MonoBehaviour
 
         // Debug.Log(_DilVerileriAnaObje[0]._DilVerileri_TR[3].Metin); // GIT LIST ICINDE LISTE ERIS ORDAKI DEGERI VER BAKALIM
 
-         _BellekYonetim.VeriKaydet_string("Dil", "EN"); // TR MI ISTIYON EN MI SECIYON ?
+        // _BellekYonetim.VeriKaydet_string("Dil", "TR"); // TR MI ISTIYON EN MI SECIYON ?
 
         _VeriYonetim.Dil_Load();
         _DilOkunanVeriler = _VeriYonetim.DilVerileriListeyiAktar();

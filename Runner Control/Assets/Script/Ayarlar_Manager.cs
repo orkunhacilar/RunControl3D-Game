@@ -32,8 +32,8 @@ public class Ayarlar_Manager : MonoBehaviour
         MenuSes.value = _Bellekyonetim.VeriOku_f("MenuSes");   //kayitli olan sesi cagir
         MenuFx.value = _Bellekyonetim.VeriOku_f("MenuFx");
         OyunSes.value = _Bellekyonetim.VeriOku_f("OyunSes");
-       
 
+       // _Bellekyonetim.VeriKaydet_string("Dil", "EN");
 
         _VeriYonetim.Dil_Load();
         _DilOkunanVeriler = _VeriYonetim.DilVerileriListeyiAktar();

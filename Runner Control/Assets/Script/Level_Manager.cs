@@ -18,8 +18,8 @@ public class Level_Manager : MonoBehaviour
     BellekYonetim _BellekYonetim = new BellekYonetim();
     public AudioSource ButonSes;
 
-   // public List<DilVerileriAnaObje> _DilVerileriAnaObje = new List<DilVerileriAnaObje>(); // Kutuphane classinda yazili olan bir class listesi tutan classi bizde list seklinde aldik.
-   // List<DilVerileriAnaObje> _DilOkunanVeriler = new List<DilVerileriAnaObje>();
+    public List<DilVerileriAnaObje> _DilVerileriAnaObje = new List<DilVerileriAnaObje>(); // Kutuphane classinda yazili olan bir class listesi tutan classi bizde list seklinde aldik.
+    List<DilVerileriAnaObje> _DilOkunanVeriler = new List<DilVerileriAnaObje>();
     public Text[] TextObjeleri;
     VeriYonetimi _VeriYonetim = new VeriYonetimi();
 
@@ -29,12 +29,12 @@ public class Level_Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-     
 
-       /* _VeriYonetim.Dil_Load();
+       // PlayerPrefs.SetString("Dil", "EN");
+        _VeriYonetim.Dil_Load();
         _DilOkunanVeriler = _VeriYonetim.DilVerileriListeyiAktar();
         _DilVerileriAnaObje.Add(_DilOkunanVeriler[2]);
-        DilTercihiYonetimi(); */
+        DilTercihiYonetimi(); 
 
         ButonSes.volume = _BellekYonetim.VeriOku_f("MenuFx");
 
@@ -67,7 +67,7 @@ public class Level_Manager : MonoBehaviour
     }
 
 
-   /*  void DilTercihiYonetimi()
+     void DilTercihiYonetimi()
     {
         if (_BellekYonetim.VeriOku_s("Dil") == "TR")
         {
@@ -83,7 +83,7 @@ public class Level_Manager : MonoBehaviour
                 TextObjeleri[i].text = _DilVerileriAnaObje[0]._DilVerileri_EN[i].Metin; // DIL VERILERI ANA OBJE[0] CUNKU ANA EKRANDAYIZ ONDAN SONRASINI ZATEN OKURSUN KOLAY
             }
         }
-    } */
+    } 
 
     public void SahneYukle(int Index)
     {
