@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: cb4d4298fe53b4407b330d18a84e1db7
   - enabled: 1
     path: "Assets/Scenes/Ozellest\u0131r.unity"
-    guid: 350863e6032fd4bedac285b9705b8482
+    guid: e7f5cd53886d24ff2b89802b040135e2
   - enabled: 1
     path: Assets/Scenes/LevelSec.unity
     guid: 1daf9fd68871e42ba8b1819eb86c6f96
@@ -19,17 +19,11 @@ EditorBuildSettings:
     guid: 453516ed3e5b34ab88d9eedb9d83c7e9
   - enabled: 1
     path: Assets/Scenes/Ayarlar.unity
-    guid: ae77bde525420488a9e4477a2b13901d
+    guid: 4a3ac6e9f8ca6459fa00534794c487f8
   - enabled: 1
     path: Assets/Scenes/Leveller/Level1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Leveller/Level2.unity
-    guid: dbdba4c9b79734b49bfd6a7920d0a9c6
-  - enabled: 1
-    path: Assets/Scenes/Leveller/Level3.unity
-    guid: ccbe0ed3e7ba349c6b8cad6699ebc6ae
-  - enabled: 1
-    path: Assets/Scenes/Leveller/Level4.unity
-    guid: 30db39d837a7940c1af3fdfccb67a93f
+    guid: 20d80707729984046b82a5c0d6a8ea1d
   m_configObjects: {}
